@@ -12,16 +12,19 @@ class Animal {
   }
 }
 
-// Cat class extending Animal
 class Cat extends Animal {
   purr() {
     console.log("purr");
   }
 }
 
-// Dog class extending Animal
 class Dog extends Animal {
   bark() {
     console.log("woof");
   }
 }
+
+// Attach to window so Cypress can access
+window.Animal = Animal;
+window.Cat = Cat;
+window.Dog = Dog;
