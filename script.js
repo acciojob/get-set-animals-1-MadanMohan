@@ -1,31 +1,26 @@
-// Base class: Animal
 class Animal {
   constructor(species) {
     this._species = species;
   }
 
+  get species() {
+    return this._species;
+  }
+
   makeSound() {
-    console.log(`The ${this._species} makes a sound`);
+    console.log(`The ${this.species} makes a sound`);
   }
 }
 
-// Subclass: Cat
+// Cat class extending Animal
 class Cat extends Animal {
-  constructor(species) {
-    super(species); // Call Animal constructor
-  }
-
   purr() {
     console.log("purr");
   }
 }
 
-// Subclass: Dog
+// Dog class extending Animal
 class Dog extends Animal {
-  constructor(species) {
-    super(species); // Call Animal constructor
-  }
-
   bark() {
     console.log("woof");
   }
